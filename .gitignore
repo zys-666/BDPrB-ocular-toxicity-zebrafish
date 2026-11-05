@@ -1,0 +1,20 @@
+# outputs
+out/
+tables/
+figures/
+data/
+# R
+.Rhistory
+.RData
+.Rproj.user/
+# OS
+.DS_Store
+Thumbs.db
+# large MD artefacts
+*.xtc
+*.trr
+*.edr
+*.tpr
+*.gro
+*.pdb
+!04_docking_md/vina/*.pdb

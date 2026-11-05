@@ -1,0 +1,4 @@
+npts 80 90 65 # num. grid points in xyz
+spacing 0.375 # spacing (A)
+gridcenter -41.057 -16.496 24.569 # xyz-coordinates or auto
+ 

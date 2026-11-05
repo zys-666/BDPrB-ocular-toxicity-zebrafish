@@ -1,0 +1,12 @@
+frames/f_58400.xtc
+frames/f_58700.xtc
+frames/f_59300.xtc
+frames/f_60500.xtc
+frames/f_60800.xtc
+frames/f_87000.xtc
+frames/f_87600.xtc
+frames/f_87900.xtc
+frames/f_88200.xtc
+frames/f_89700.xtc
+frames/f_95300.xtc
+frames/f_96500.xtc
