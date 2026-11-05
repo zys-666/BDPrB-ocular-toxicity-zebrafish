@@ -11,7 +11,7 @@ RNA-seq) but **no Code availability**. Add one of the following.
 
 > Code availability
 > All custom code used for the transcriptome, machine-learning, microbiota-correlation and
-> molecular-dynamics analyses is available at https://github.com/<account>/<repo> (archived at
+> molecular-dynamics analyses is available at https://github.com/zys-666/BDPrB-ocular-toxicity-zebrafish (archived at
 > https://doi.org/10.5281/zenodo.<id>). Third-party software is cited in the Methods:
 > HISAT2, StringTie, DESeq2, WGCNA, clusterProfiler, STRING/cytoHubba, Cytoscape, fastshap,
 > Trimmomatic, cutadapt, DADA2, LEfSe, PICRUSt2, AutoDock Vina, GROMACS and gmx_MMPBSA.
@@ -20,7 +20,7 @@ RNA-seq) but **no Code availability**. Add one of the following.
 
 > 代码可用性
 > 本研究转录组、机器学习、菌群相关性及分子动力学分析所用的全部自编代码见
-> https://github.com/<账号>/<仓库>（存档于 https://doi.org/10.5281/zenodo.<编号>）。
+> https://github.com/zys-666/BDPrB-ocular-toxicity-zebrafish（存档于 https://doi.org/10.5281/zenodo.<编号>）。
 > 第三方软件已在方法部分引用：HISAT2、StringTie、DESeq2、WGCNA、clusterProfiler、
 > STRING/cytoHubba、Cytoscape、fastshap、Trimmomatic、cutadapt、DADA2、LEfSe、
 > PICRUSt2、AutoDock Vina、GROMACS 与 gmx_MMPBSA。
