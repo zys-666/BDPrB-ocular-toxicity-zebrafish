@@ -71,6 +71,8 @@ HSD (Methods 2.11); those analyses are not scripted here.
 04_docking_md/           mdp/ (GROMACS inputs) · vina/ (receptor, ligand, poses)
                          gromacs_selections/ (selection files) · scripts/
 05_figures/              Figure 2 panel assembly, supplementary figures
+06_wetlab_stats/         README only - the statistics for Figures 1, 3 and 6 are not scripted
+00_docs/                 note explaining which data are not distributed with this repository
 archive/                 earlier iterations of the docking/MD scripts, kept for
                          provenance, not needed to reproduce any figure
 ```
