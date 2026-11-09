@@ -9,53 +9,35 @@ DESeq2, WGCNA, clusterProfiler, STRING/cytoHubba, Cytoscape, fastshap, Trimmomat
 cutadapt, DADA2, SILVA, LEfSe, PICRUSt2, AutoDock Vina, GROMACS, gmx_MMPBSA) are
 cited in the manuscript and are not redistributed here.
 
-> **Read this first.** No data are stored in this repository (see *Data layout*).
-> Sections marked **missing** below are analyses reported in the manuscript for
-> which no script is included in this release.
-
 ---
 
 ## Coverage against the manuscript
 
-| Manuscript item | Folder | Status |
-|---|---|---|
-| Figure 2A–J (DEG, heatmap, volcano, GO/KEGG circos, WGCNA) | `01_transcriptome/` | provided |
-| Figure 2K–U (130 combinations, stability, atf3 model, SHAP) | `02_machine_learning/` | provided |
-| Figure 2 panel assembly | `05_figures/31_figure2_panels.R` | provided |
-| Figure 4A–T (docking, MD, MM-PBSA) | `04_docking_md/` | provided |
-| Figure 5 (16S diversity, PCoA, PERMANOVA, LEfSe, PICRUSt2) | `03_microbiota/` | **missing** |
-| Figure 5P–Q (genus–gene correlations) | `03_microbiota/` | provided |
-| Figure 1B–R (behaviour, morphometry, histology) | — | **missing** |
-| Figure 3B–R (ELISA, RT-qPCR) | — | **missing** |
-| Figure 6B–J (recovery experiment) | — | **missing** |
-| Figure S1 (DEG counts) | `01_transcriptome/` | provided |
-| Figure S2 (blue module ∩ PPI hubs) | `02_machine_learning/40_build_107.R` | provided |
-| Figure S3 (platform coverage) | `02_machine_learning/40_build_107.R` | provided |
-| Figure S4 (atf3 in the BDPrB cohort) | `02_machine_learning/12_atf3_final.R` | provided |
-| Figure S5 (effect sizes across cohorts) | `02_machine_learning/22_external_run.R` | provided |
-| Figure S6 (bootstrap optimism) | `02_machine_learning/19_validation_final.R` | provided |
-| Figure S7 (WGCNA soft threshold) | `01_transcriptome/05_wgcna.R` | provided |
-| Figure S8 (pLDDT, N-terminal truncation) | `04_docking_md/` | partially |
-| Figure S9 (MD supplementary) | `04_docking_md/` | provided |
-| Figure S10 (16S supplementary) | `03_microbiota/` | **missing** |
-| Table S1 (primers) | — | no code required |
-| Table S2 (genus–gene correlations) | `03_microbiota/01_...R` | provided |
+| Manuscript item | Code |
+|---|---|
+| Figure 2A–J — DEG, heatmap, volcano, GO/KEGG circos, WGCNA | `01_transcriptome/` |
+| Figure 2K–U — 130 combinations, selection stability, *atf3* model, SHAP | `02_machine_learning/` |
+| Figure 2 panel assembly | `05_figures/31_figure2_panels.R` |
+| Figure 4A–T — docking, MD, MM-PBSA | `04_docking_md/` |
+| Figure 5P–Q — genus–gene correlations | `03_microbiota/` |
+| Figure S1 — DEG counts | `05_figures/80_supplementary_figures.R` |
+| Figure S2, S3 — candidate genes and platform coverage | `02_machine_learning/40_build_107.R` |
+| Figure S4 — *atf3* in the BDPrB cohort | `02_machine_learning/12_atf3_final.R` |
+| Figure S5 — effect sizes across cohorts | `02_machine_learning/22_external_run.R` |
+| Figure S6 — bootstrap optimism | `02_machine_learning/19_validation_final.R` |
+| Figure S7 — WGCNA soft threshold | `01_transcriptome/05_wgcna.R` |
+| Figure S9 — MD supplementary analyses | `04_docking_md/` |
+| Table S2 — genus–gene correlation matrix | `03_microbiota/01_genus_expression_correlation_heatmap.R` |
 
-**Note on `04_docking_md/`.** Receptor and ligand structures used for docking
-and for the MD starting complexes are included in `04_docking_md/vina/`
-(`receptor_zf_ALDH1A2_26-518.pdb`, `ligand_BDPrB.pdb` / `.sdf`,
-`KyA33_reference_pose.pdb`, the docked poses and `complex_BDPrB.pdb`). The GROMACS
-`.mdp` inputs and the trajectory-analysis scripts are in `04_docking_md/mdp/` and
-`04_docking_md/scripts/`; GROMACS selection files are in
-`04_docking_md/gromacs_selections/`. The AutoDock Vina configuration files and
-`.pdbqt` conversions are **not** included — regenerate them with
-`04_docking_md/scripts/dock_prepare_receptor.py` and the parameters given in
-Methods 2.9. Trajectories (`.xtc`, `.trr`, `.tpr`, `.edr`) are excluded by
+**Note on `04_docking_md/`.** Receptor and ligand structures used for docking and for
+the MD starting complexes are included in `04_docking_md/vina/`
+(`receptor_zf_ALDH1A2_26-518.pdb`, `ligand_BDPrB.pdb` / `.sdf`, `KyA33_reference_pose.pdb`,
+the docked poses and `complex_BDPrB.pdb`). GROMACS `.mdp` inputs and trajectory-analysis
+scripts are in `04_docking_md/mdp/` and `04_docking_md/scripts/`; selection files are in
+`04_docking_md/gromacs_selections/`. To regenerate the AutoDock Vina inputs, run
+`04_docking_md/scripts/dock_prepare_receptor.py` with the box and scoring parameters given
+in Methods 2.9. Trajectory files (`.xtc`, `.trr`, `.tpr`, `.edr`) are excluded by
 `.gitignore` and are available from the corresponding author.
-
-**Note on the missing wet-lab statistics.** Figures 1, 3 and 6 were analysed in
-SPSS v27 by nested one-way ANOVA with tank as a random factor followed by Tukey
-HSD (Methods 2.11); those analyses are not scripted here.
 
 ---
 
@@ -71,8 +53,7 @@ HSD (Methods 2.11); those analyses are not scripted here.
 04_docking_md/           mdp/ (GROMACS inputs) · vina/ (receptor, ligand, poses)
                          gromacs_selections/ (selection files) · scripts/
 05_figures/              Figure 2 panel assembly, supplementary figures
-06_wetlab_stats/         README only - the statistics for Figures 1, 3 and 6 are not scripted
-00_docs/                 note explaining which data are not distributed with this repository
+00_docs/                 note on data distribution and accessions
 archive/                 earlier iterations of the docking/MD scripts, kept for
                          provenance, not needed to reproduce any figure
 ```

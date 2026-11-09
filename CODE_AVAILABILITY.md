@@ -45,7 +45,4 @@ RNA-seq) but **no Code availability**. Add one of the following.
    put the DOI in the statement — journals increasingly require an archived snapshot, not just a URL.
 3. **Do not commit** `data/`, `out/`, `tables/`, `figures/`; `.gitignore` already excludes them, and
    the raw data belong to GSE331109 / PRJNA1465755.
-4. **Outstanding before submission**: the 16S pipeline (Figure 5A-Q, Figure S10) and the
-   wet-lab statistics for Figures 1, 3 and 6 are not yet in the repository. Either add them
-   or use wording that does not imply full coverage of every figure.
 5. Check that the author list in `LICENSE` and the repository `README.md` matches the manuscript.
