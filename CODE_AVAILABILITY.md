@@ -12,7 +12,7 @@ RNA-seq) but **no Code availability**. Add one of the following.
 > Code availability
 > All custom code used for the transcriptome, machine-learning, microbiota-correlation and
 > molecular-dynamics analyses is available at https://github.com/zys-666/BDPrB-ocular-toxicity-zebrafish (archived at
-> https://doi.org/10.5281/zenodo.<id>). Third-party software is cited in the Methods:
+> https://doi.org/10.5281/zenodo.<ID-PENDING>). Third-party software is cited in the Methods:
 > HISAT2, StringTie, DESeq2, WGCNA, clusterProfiler, STRING/cytoHubba, Cytoscape, fastshap,
 > Trimmomatic, cutadapt, DADA2, LEfSe, PICRUSt2, AutoDock Vina, GROMACS and gmx_MMPBSA.
 
@@ -38,14 +38,14 @@ RNA-seq) but **no Code availability**. Add one of the following.
 
 ---
 
-## Before you submit
+## Before submission (status as of 2026-11-09)
 
-1. **Create the repository** and push the folder `15.投稿材料包` as-is
-   (`git init && git add . && git commit -m "analysis code" && git remote add origin <URL> && git push -u origin main`).
+1. **Repository created and populated** — https://github.com/zys-666/BDPrB-ocular-toxicity-zebrafish
 2. **Mint a DOI** through Zenodo (link the GitHub account, then release a tag such as `v1.0`) and
    put the DOI in the statement — journals increasingly require an archived snapshot, not just a URL.
 3. **Do not commit** `data/`, `out/`, `tables/`, `figures/`; `.gitignore` already excludes them, and
    the raw data belong to GSE331109 / PRJNA1465755.
-4. If you prefer not to publish the 16S command lines (see `03_microbiota/README.md`), Option B
-   avoids the question altogether, but Option A is stronger for review.
+4. **Outstanding before submission**: the 16S pipeline (Figure 5A-Q, Figure S10) and the
+   wet-lab statistics for Figures 1, 3 and 6 are not yet in the repository. Either add them
+   or use wording that does not imply full coverage of every figure.
 5. Check that the author list in `LICENSE` and the repository `README.md` matches the manuscript.
